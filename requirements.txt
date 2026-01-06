@@ -1,0 +1,7 @@
+streamlit==1.41.1
+playwright==1.49.0
+beautifulsoup4==4.12.3
+lxml==5.3.0
+faiss-cpu==1.9.0.post1
+sentence-transformers==3.3.1
+numpy==1.26.4
