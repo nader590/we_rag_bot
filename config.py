@@ -230,7 +230,11 @@ def crawl_sites(
     docs: List[Dict] = []
 
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=headless)
+browser = p.chromium.launch(
+    headless=headless,
+    args=["--no-sandbox", "--disable-dev-shm-usage"]
+)
+
         context = browser.new_context(
             user_agent=USER_AGENT,
             viewport={"width": 1280, "height": 720}
